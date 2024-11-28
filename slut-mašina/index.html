@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slat Mašina</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Place these inside the <body> or appropriate section -->
+    <audio id="audio-dino-start" src="audio/dino_start.mp3" preload="auto"></audio>
+    <audio id="audio-dino-reel1" src="audio/dino_reel1.mp3" preload="auto"></audio>
+    <audio id="audio-dino-reel2" src="audio/dino_reel2.mp3" preload="auto"></audio>
+    <audio id="audio-dino-reel3" src="audio/dino_reel3.mp3" preload="auto"></audio>
+    <audio id="audio-dino-fail1" src="audio/dino_fail1.mp3" preload="auto"></audio>
+    <audio id="audio-dino-fail2" src="audio/dino_fail2.mp3" preload="auto"></audio>
+    <audio id="audio-jackpot_sound" src="audio/jackpot_sound.mp3" preload="auto"></audio>
+
+    <div id="slot-machine">
+        <h1>Slat Mašina</h1>
+
+        <!-- Reel Container -->
+        <div class="reels">
+            <div class="reel" id="reel1">°</div>
+            <div class="reel" id="reel2">°</div>
+            <div class="reel" id="reel3">°</div>
+        </div>
+
+       <!-- Buttons Section -->
+        <button id="spin-button">Spin (Cost: 21 Points)</button> <!-- Spin Button with Cost -->
+        <button id="respin-button" style="display: none;">Respin (Cost: 34 Points)</button> <!-- Respin Button -->
+        <button id="recharge-button" style="display: none;">Recharge (+300 Points)</button> <!-- Recharge Button -->
+
+        <!-- Message Section -->
+        <div id="message"></div>
+
+        <!-- Score Display -->
+        <div id="turn-score" style="opacity: 0; transition: opacity 0.5s ease-out; font-size: 18px; text-align: center;"></div>
+        <div id="score">Score: 0</div>
+        <div id="recharge-counter">Recharges: 0</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

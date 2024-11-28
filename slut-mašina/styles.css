@@ -1,0 +1,180 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Slot Machine Container */
+#slot-machine {
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #000;
+    background-color: #fff;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Reel Container */
+.reels {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+/* Individual Reel Styling */
+.reel {
+    width: 80px;
+    height: 80px;
+    background-color: #eee;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Spin Button Styling */
+#spin-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#spin-button:hover {
+    background-color: #218838;
+}
+
+#spin-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Message Styling */
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Score Styling */
+#score {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Animation for Reels */
+@keyframes spin {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    #slot-machine {
+        width: 90%;
+    }
+
+    .reel {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    #spin-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    #message {
+        font-size: 16px;
+    }
+
+    #score {
+        font-size: 14px;
+    }
+}
+
+#respin-button {
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #ff4500;
+    /* Highlight with an attention-grabbing color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#respin-button:hover {
+    background-color: #ff6347;
+    /* Slightly lighter on hover */
+}
+
+#recharge-button {
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #28a745;
+    /* Green color for recharge */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#recharge-button:hover {
+    background-color: #218838;
+    /* Darker green on hover */
+}
+
+@keyframes spin-animation {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Add this to your styles.css 
+
+/* Spinning animation
+@keyframes reel-spin {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+.reel.spinning {
+    animation: reel-spin 0.5s linear;
+}
+*/
